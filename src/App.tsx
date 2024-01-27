@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "../src/css/App.css"
+import Home from "./pages/Home"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <div className="App_center" style={{ 
+                backgroundImage: `url("https://www.eastwestbpo.com/wp/wp-content/uploads/2016/05/background.png")` 
+            }}>
+                    <Home />
+                </div>
+            </header>   
+        </div>
+    )
 }
 
-export default App;
+export default App
