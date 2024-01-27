@@ -6,9 +6,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <div className="App_center" style={{ 
-                backgroundImage: `url("https://www.eastwestbpo.com/wp/wp-content/uploads/2016/05/background.png")` 
-            }}>
+                <div className="App_center">
                     <Home />
                 </div>
             </header>   

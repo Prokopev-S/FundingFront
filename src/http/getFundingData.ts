@@ -1,12 +1,12 @@
 import axios from "axios"
-import { IFunding } from "../models/IFunding"
+import { IFunding, IResponseFunding } from "../models/IFunding"
 
 
 export const getFundingData = async () => {
     let response
     try {
         response = await axios.get<IFunding>(
-            `https://62811cdf7532b4920f77b2db.mockapi.io/posts/`
+            `http://localhost:8080/funding`
     );
     } catch (e) {
         console.log(e)
@@ -102,5 +102,7 @@ export const getFundingData = async () => {
           }
         ]
       }
-    return tepmRes
+
+      return response?.data
+
 };

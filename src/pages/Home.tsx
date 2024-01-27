@@ -13,6 +13,7 @@ import { Kucoin } from "../pictures"
 import { Bitmart } from "../pictures"
 import { Coinex } from "../pictures"
 import { Huobi } from "../pictures"
+import { IFunding, IResponseFunding } from "../models/IFunding";
 
 const Home = () => {
     const exchangesArr = [{name: "Binance", logo: Binance}, {name: "Bybit", logo: Bybit}, {name: "Mexc", logo: Mexc}, {name: "Gateio", logo: Gateio}, {name: "Bitget", logo: Bitget}, {name: "Bingx", logo: Bingx}, {name: "Kucoin", logo: Kucoin}, {name: "Bitmart", logo: Bitmart}, {name: "Htx", logo: Huobi}, {name: "Coinex", logo: Coinex}]
@@ -20,15 +21,17 @@ const Home = () => {
     const [negativeArr, setNegativeArr]: any = useState();
 
     React.useEffect(() => {
-      const dataFetch = async () => {
-          const data2 = await getFundingData()
-
-          const pArr = prepareData(data2.positive, exchangesArr)
-          setPositiveArr(pArr)
-          const nArr = prepareData(data2.negative, exchangesArr)
-          setNegativeArr(nArr)
-      }
-      dataFetch()
+        const dataFetch = async () => {
+            const response: IFunding | undefined  =  await getFundingData()
+          
+            if (!response) return
+            
+            const pArr = prepareData(response.positive, exchangesArr)
+            setPositiveArr(pArr)
+            const nArr = prepareData(response.negative, exchangesArr)
+            setNegativeArr(nArr)
+        }
+        dataFetch()
     }, [])
 
     return (

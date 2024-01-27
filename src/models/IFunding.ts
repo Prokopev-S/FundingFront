@@ -21,3 +21,7 @@ export interface IFunding {
     positive: PositiveItem[]
     negative: NegativeItem[]
 }
+
+export interface IResponseFunding {
+  data: IFunding
+}

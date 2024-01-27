@@ -2,6 +2,7 @@ import { PositiveItem } from "../models/IFunding"
 
 const prepareData = (data: any, exchangesArr: any) => {
     const arr = []
+
     for (let i=0; i<data.length; i++) {
         const item = data[i]
         const symbol = item.symbol
