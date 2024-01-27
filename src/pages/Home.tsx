@@ -15,7 +15,7 @@ import { Coinex } from "../pictures"
 import { Huobi } from "../pictures"
 
 const Home = () => {
-    const exchangesArr = [{name: "Binance", logo: Binance}, {name: "Bybit", logo: Bybit}, {name: "Mexc", logo: Mexc}, {name: "Gateio", logo: Gateio}, {name: "Bitget", logo: Bitget}, {name: "Bingx", logo: Bingx}, {name: "Kucoin", logo: Kucoin}, {name: "Bitmart", logo: Bitmart}, {name: "Huobi", logo: Huobi}, {name: "Coinex", logo: Coinex}]
+    const exchangesArr = [{name: "Binance", logo: Binance}, {name: "Bybit", logo: Bybit}, {name: "Mexc", logo: Mexc}, {name: "Gateio", logo: Gateio}, {name: "Bitget", logo: Bitget}, {name: "Bingx", logo: Bingx}, {name: "Kucoin", logo: Kucoin}, {name: "Bitmart", logo: Bitmart}, {name: "Htx", logo: Huobi}, {name: "Coinex", logo: Coinex}]
     const [positiveArr, setPositiveArr]: any = useState();
     const [negativeArr, setNegativeArr]: any = useState();
 
