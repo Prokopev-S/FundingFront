@@ -18,7 +18,7 @@ const NegativeTable: React.FC<any> = ({negativeArr, exchangesArr}) => {
                 console.log(sortColumn, sortType)
             }}
         >
-            <Column width={110} align="center" fixed>
+            <Column width={130} align="center" fixed>
                 <HeaderCell><img
                     className="coin__logo"
                     src={String(Coin)}

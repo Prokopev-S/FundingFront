@@ -6,6 +6,7 @@ import { Coin } from "../pictures"
 const { Column, HeaderCell, Cell } = Table
 
 const PositiveTable: React.FC<any> = ({positiveArr, exchangesArr}) => {
+  console.log(positiveArr)
     return (
         <Table
             autoHeight={true}
@@ -16,7 +17,7 @@ const PositiveTable: React.FC<any> = ({positiveArr, exchangesArr}) => {
                 console.log(sortColumn, sortType)
             }}
         >
-            <Column width={110} align="center" fixed>
+            <Column width={130} align="center" fixed>
                 <HeaderCell>
                   <img
                     className="coin__logo"
@@ -28,12 +29,12 @@ const PositiveTable: React.FC<any> = ({positiveArr, exchangesArr}) => {
             {
                 exchangesArr.map((item: any, index: any) => (
                   <Column width={120} align="center" key={`${item.name}_${index}`}>
-                    <HeaderCell><img
-                    className="coin__logo"
-                    src={String(item.logo)}
-                  ></img>
-                  {item.name}</HeaderCell>
-                    <Cell dataKey={item.name} />
+                    <HeaderCell>
+                      <img className="coin__logo"src={String(item.logo)}></img>
+                      {item.name}
+                    </HeaderCell>
+
+                    <Cell dataKey={item.name}/>
                   </Column>
                 ))
             }
